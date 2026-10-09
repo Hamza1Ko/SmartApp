@@ -90,4 +90,3 @@ def weerstation():
         print("=" * 40)
 
 
-weerstation()
