@@ -107,17 +107,15 @@ def overwrite_settings(OutputFile):
 
 
 def smart_app_controller():
-    """
-    Hoofdmenu van de applicatie.
-    """
 
     input_file = "InputFile.txt"
     output_file = "OutputFile.txt"
 
     while True:
+        print('\nWelkom bij smart app controller!')
         try:
             keuze = int(input(
-                "\n1. Aantal dagen weergeven\n"
+                "1. Aantal dagen weergeven\n"
                 "2. Automatisch berekenen en opslaan\n"
                 "3. Waarde overschrijven\n"
                 "4. Stoppen\n"
@@ -147,13 +145,12 @@ def smart_app_controller():
                 print("Ongeldige invoer.")
 
         elif keuze == 4:
-            print("Goodbye!")
+            print("Goodbye!\n")
             break
 
         else:
             print("Ongeldige keuze.")
 
-# smart_app_controller()
 
 
 

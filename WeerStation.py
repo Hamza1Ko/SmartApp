@@ -29,10 +29,11 @@ def weerstation():
     for dag in range(1, 8):
 
         while True:
+            print("\nWelkom bij het weerstation!")
             temp = input(f"Wat is op dag {dag} de temperatuur [°C]: ")
 
             if temp == "":
-                print("Programma gestopt.")
+                print("Programma gestopt.\n")
                 return
 
             try:
@@ -45,7 +46,7 @@ def weerstation():
             wind = input(f"Wat is op dag {dag} de windsnelheid [m/s]: ")
 
             if wind == "":
-                print("Programma gestopt.")
+                print("Programma gestopt.\n")
                 return
 
             try:
@@ -64,7 +65,7 @@ def weerstation():
             vocht = input(f"Wat is op dag {dag} de vochtigheid [%]: ")
 
             if vocht == "":
-                print("Programma gestopt.")
+                print("Programma gestopt.\n")
                 return
 
             try:
