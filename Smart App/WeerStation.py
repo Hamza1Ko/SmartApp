@@ -50,7 +50,13 @@ def weerstation():
 
             try:
                 wind = float(wind)
+
+                if wind < 0:
+                    print("Ongeldige invoer, probeer opnieuw.")
+                    continue
+
                 break
+
             except ValueError:
                 print("Ongeldige invoer, probeer opnieuw.")
 
@@ -84,3 +90,4 @@ def weerstation():
         print("=" * 40)
 
 
+weerstation()
