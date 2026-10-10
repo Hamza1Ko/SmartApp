@@ -25,11 +25,10 @@ def weerrapport(temp_c, windsnelheid, luchtvochtigheid):
 
 def weerstation():
     temperaturen = []
-
+    print("\nWelkom bij het weerstation!")
     for dag in range(1, 8):
 
         while True:
-            print("\nWelkom bij het weerstation!")
             temp = input(f"Wat is op dag {dag} de temperatuur [°C]: ")
 
             if temp == "":

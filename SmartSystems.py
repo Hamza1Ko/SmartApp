@@ -107,12 +107,11 @@ def overwrite_settings(OutputFile):
 
 
 def smart_app_controller():
-
+    print('\nWelkom bij smart app controller!')
     input_file = "InputFile.txt"
     output_file = "OutputFile.txt"
 
     while True:
-        print('\nWelkom bij smart app controller!')
         try:
             keuze = int(input(
                 "1. Aantal dagen weergeven\n"
