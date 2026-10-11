@@ -59,26 +59,37 @@ def overwrite_settings(OutputFile):
         if dateInFile == date:
             gevonden=True
 
-            system = int(input(
-                "Choose system:\n"
-                "1. CV ketel\n"
-                "2. Ventilatie\n"
-                "3. Bewatering\n"
-            ))
+            try:
+                system = int(input(
+                    "Kies welk systeem:\n"
+                    "1. CV ketel\n"
+                    "2. Ventilatie\n"
+                    "3. Bewatering\n"
+                ))
+            except:
+                return -3
 
             if system not in [1, 2, 3]:
-                return-3
+                return -3
 
             new_value = input("Verandering: ")
 
             if system == 1:
-                new_value=int(new_value)
+                try:
+                    new_value = int(new_value)
+                except:
+                    return -3
+
                 if new_value < 0 or new_value > 100:
                     return -3
                 gegevens[1] = str(new_value)
 
             elif system == 2:
-                new_value = int(new_value)
+                try:
+                    new_value = int(new_value)
+                except:
+                    return -3
+
                 if new_value < 0 or new_value > 4:
                     return -3
                 gegevens[2] = str(new_value)
@@ -154,7 +165,7 @@ def smart_app_controller():
 
 
 
-
+smart_app_controller()
 
 
 
